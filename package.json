@@ -1,0 +1,24 @@
+{
+  "name": "knt",
+  "version": "1.0.0",
+  "description": "ui framework with angular, nodejs and gulp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "knt"
+  ],
+  "author": "kntrieu",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-util": "^3.0.8",
+    "run-sequence": "^1.2.2"
+  }
+}
