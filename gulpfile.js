@@ -11,30 +11,49 @@ var gulp        = require('gulp'),
     watch       = require('gulp-watch'),
     sequence    = require('gulp-watch-sequence'),
     gulpMerge   = require('gulp-merge'),
+    exec        = require('child_process').exec,
     concat      = require('gulp-concat');
 
 // define paths
 var paths = {
-    dist        : 'dist/*',
-    src         : 'src',
-    iconSource  : 'src/icons/*.svg',
-    iconDist    : 'dist/icons/',
-    imagesSource: 'src/images/*',
-    imagesDist  : 'dist/images/',
+    dist             : 'dist/*',
+    src              : 'src',
+    iconSource       : 'src/icons/*.svg',
+    iconDist         : 'dist/icons/',
+    imagesSource     : 'src/images/*',
+    imagesDist       : 'dist/images/',
     imagesDistClean  : 'dist/images/*',
-    scriptLibDist  : 'dist/js/',
-    templateSource: 'src/templates/'
+    scriptLibDist    : 'dist/js/',
+    templateSource   : 'src/templates/',
+    scriptCommon     : 'src/js/common/*/*js',
+    scriptApp        : 'src/js/app.js',
+    scriptPages      : ['src/js/sample/*js'],
 };
 
 // library paths
 var lib = [
     'node_modules/angular/angular.js', // => for debug
-    //'node_modules/angular/angular.min.js'
+    //'node_modules/angular/angular.min.js',
+    'node_modules/angular-route/angular-route.js', // => for debug
+    //node_modules/'angular-route/angular-route.min.js'
+];
+
+//js source paths
+var kui = [
+    paths.src + '/js/app.js',
+];
+
+//js common source
+var kui_common = [
+    paths.src + '/js/common/*/*js',
 ];
 
 // create default gulp task 
 gulp.task('default', function(callback){
-    runSequence('clean', 'image-compress','iconfont', 'build-js-lib', 'copy-master-page', 'watch', callback);
+    runSequence('clean', 'image-compress',
+                'iconfont', 'build-js-lib',
+                'build-js-kui', 'build-js-common','build-js-pages','copy-master-page',
+                'watch', callback);
 });
 
 // image compression
@@ -85,7 +104,25 @@ gulp.task('watch', function () {
     name      : 'MASTER PAGE',
     emitOnGlob: false
   }, queue.getHandler('copy-master-page'));
- 
+
+  //watch js common
+   watch(paths.scriptCommon, {
+    name      : 'JS COMMON',
+    emitOnGlob: false
+  }, queue.getHandler('build-js-common'));
+
+  //watch app.js
+   watch(paths.scriptApp, {
+    name      : 'APP.JS',
+    emitOnGlob: false
+  }, queue.getHandler('build-js-kui'));
+
+  //watch page
+   watch(paths.scriptPages, {
+    name      : 'PAGES',
+    emitOnGlob: false
+  }, queue.getHandler('build-js-pages'));
+
 });
 
 // build iconfont
@@ -125,13 +162,48 @@ gulp.task('build-js-lib', function () {
   return gulpMerge(
      gulp.src(lib)
     )
-    .pipe(concat('knt-lib.js'))
+    .pipe(concat('k-ui-lib.js'))
     .pipe(gulp.dest('dist/js/'));
 });
 
+// Build k-ui js
+gulp.task('build-js-kui', function () {
+  return gulpMerge(
+     gulp.src(kui)
+    )
+    .pipe(concat('k-ui.js'))
+    .pipe(gulp.dest('dist/js/'));
+});
+
+// Build k-ui js
+gulp.task('build-js-common', function () {
+  return gulpMerge(
+     gulp.src(kui_common)
+    )
+    .pipe(concat('k-ui-common.js'))
+    .pipe(gulp.dest('dist/js/'));
+});
+
+// Build js pages
+gulp.task('build-js-pages', function () {
+  return gulpMerge(
+     gulp.src(paths.scriptPages)
+    )
+    .pipe(concat('k-ui-pages.js'))
+    .pipe(gulp.dest('dist/js/'));
+});
+
+// Copy master page
 gulp.task('copy-master-page', function () {
+    console.log("Master page had been reloaded");
     return gulp.src("src/index.html").pipe(gulp.dest("dist"));
 });
 
-
+gulp.task('server', function (cb) {
+  exec('lite-server -c lite-server.js', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+});
 
