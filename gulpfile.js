@@ -24,7 +24,8 @@ var paths = {
     imagesDist       : 'dist/images/',
     imagesDistClean  : 'dist/images/*',
     scriptLibDist    : 'dist/js/',
-    templateSource   : 'src/templates/',
+    templateSource   : 'src/js/*/templates/**/*',
+    templateDist     : 'dist/views/',
     scriptCommon     : 'src/js/common/*/*js',
     scriptApp        : 'src/js/app.js',
     scriptPages      : ['src/js/sample/*js'],
@@ -50,7 +51,7 @@ var kui_common = [
 
 // create default gulp task 
 gulp.task('default', function(callback){
-    runSequence('clean', 'image-compress',
+    runSequence('clean', 'image-compress', 'copy-views',
                 'iconfont', 'build-js-lib',
                 'build-js-kui', 'build-js-common','build-js-pages','copy-master-page',
                 'watch', callback);
@@ -81,6 +82,12 @@ gulp.task('clean-icons', function() {
 // clean all content of dist/js
 gulp.task('clean-js', function() {
     return del(paths.scriptLibDist + "*");
+});
+
+
+// clean views 
+gulp.task('clean-views', function() {
+    return del(paths.templateDist + "*");
 });
 
 // watch 
@@ -117,11 +124,17 @@ gulp.task('watch', function () {
     emitOnGlob: false
   }, queue.getHandler('build-js-kui'));
 
-  //watch page
+  //watch page js
    watch(paths.scriptPages, {
-    name      : 'PAGES',
+    name      : 'JS PAGES',
     emitOnGlob: false
   }, queue.getHandler('build-js-pages'));
+
+  //watch views
+  watch(paths.templateSource, {
+    name      : 'VIEWS',
+    emitOnGlob: false
+  }, queue.getHandler('clean-views', 'copy-views'));
 
 });
 
@@ -199,7 +212,13 @@ gulp.task('copy-master-page', function () {
     return gulp.src("src/index.html").pipe(gulp.dest("dist"));
 });
 
-gulp.task('server', function (cb) {
+// copy views
+gulp.task('copy-views', function () {
+    gulp.src(paths.templateSource)
+    .pipe(gulp.dest(paths.templateDist));
+});
+
+gulp.task('start-server', function (cb) {
   exec('lite-server -c lite-server.js', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
