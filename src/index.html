@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>K-UI</title>
+  <link rel="stylesheet" href="css/k-ui-lib.css">
   <link rel="stylesheet" href="icons/iconfont.css">
   <script src="js/k-ui-lib.js"></script>
   <script src="js/k-ui.js"></script>
@@ -12,9 +13,24 @@
 </head>
 
 <body>
-  <h1>Welcome to K-UI framework</h1>
-  <div ng-view></div>
-  
+  <div class="knt">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">JavaScript</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div ng-view></div>
+
+    
+  </div>
+
+
 </body>
 
 </html>

@@ -29,6 +29,8 @@ var paths = {
     scriptCommon     : 'src/js/common/*/*js',
     scriptApp        : 'src/js/app.js',
     scriptPages      : ['src/js/sample/*js'],
+    fontSource       : 'src/fonts/*/*',
+    fontDist         : 'dist/fonts/',
 };
 
 // library paths
@@ -37,6 +39,10 @@ var lib = [
     //'node_modules/angular/angular.min.js',
     'node_modules/angular-route/angular-route.js', // => for debug
     //node_modules/'angular-route/angular-route.min.js'
+];
+
+var css_lib = [
+    'src/style/lib/*.css',
 ];
 
 //js source paths
@@ -52,6 +58,7 @@ var kui_common = [
 // create default gulp task 
 gulp.task('default', function(callback){
     runSequence('clean', 'image-compress', 'copy-views',
+                'build-css-lib', 'copy-fonts',
                 'iconfont', 'build-js-lib',
                 'build-js-kui', 'build-js-common','build-js-pages','copy-master-page',
                 'watch', callback);
@@ -88,6 +95,11 @@ gulp.task('clean-js', function() {
 // clean views 
 gulp.task('clean-views', function() {
     return del(paths.templateDist + "*");
+});
+
+// clean fonts
+gulp.task('clean-fonts', function() {
+    return del(paths.fontDist + "*");
 });
 
 // watch 
@@ -136,6 +148,11 @@ gulp.task('watch', function () {
     emitOnGlob: false
   }, queue.getHandler('clean-views', 'copy-views'));
 
+  //watch fonts
+   watch(paths.fontSource, {
+    name      : 'FONTS',
+    emitOnGlob: false
+   }, queue.getHandler('clean-fonts', 'copy-fonts'));
 });
 
 // build iconfont
@@ -206,10 +223,26 @@ gulp.task('build-js-pages', function () {
     .pipe(gulp.dest('dist/js/'));
 });
 
+
+// Build css lib
+gulp.task('build-css-lib', function () {
+    return gulpMerge(
+     gulp.src(css_lib)
+    )
+    .pipe(concat('k-ui-lib.css'))
+    .pipe(gulp.dest('dist/css/'));
+});
+
 // Copy master page
 gulp.task('copy-master-page', function () {
     console.log("Master page had been reloaded");
     return gulp.src("src/index.html").pipe(gulp.dest("dist"));
+});
+
+//copy fonts
+gulp.task('copy-fonts', function () {
+    gulp.src(paths.fontSource)
+    .pipe(gulp.dest(paths.fontDist));
 });
 
 // copy views
