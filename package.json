@@ -9,10 +9,16 @@
   "keywords": [
     "k-ui"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nhuttrieukiem/knt.git"
+  },
   "author": "k-uirieu",
   "license": "UNLICENSED",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-stylus": "^2.6.0"
   },
   "devDependencies": {
     "angular": "^1.6.2",
