@@ -3,16 +3,10 @@ angular.module('knt')
 .config(function($routeProvider, $locationProvider) {
    $routeProvider
     .when("/", {
-        template : "<h5>What</h5><p>Home page</p>"
-    })
-    .when("/banana", {
-        template : "<h5>Banana</h5><p>Bananas contain around 75% water.</p>"
-    })
-    .when("/tomato", {
-        template : "<h5>Tomato</h5><p>Tomatoes contain around 95% water.</p>"
+        templateUrl: '../views/sample/templates/index.html'
     })
     .otherwise({
-        template : "<h5>None</h5><p>Nothing has been selected</p>"
+        templateUrl: '../views/sample/templates/index.html'
     });
 
     // use the HTML5 History API
