@@ -1,3 +1,9 @@
+
+/**
+ * Routes
+ * Created by kntrieu
+ * Date created: March 09, 2017
+ */
 angular.module('knt')
 
 .config(function($routeProvider, $locationProvider) {
