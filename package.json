@@ -16,9 +16,12 @@
   "author": "k-uirieu",
   "license": "UNLICENSED",
   "dependencies": {
+    "angular-translate": "^2.15.1",
     "gulp": "^3.9.1",
     "gulp-sourcemaps": "^2.4.1",
-    "gulp-stylus": "^2.6.0"
+    "gulp-stylus": "^2.6.0",
+    "jquery": "^3.1.1",
+    "materialize-css": "^0.98.0"
   },
   "devDependencies": {
     "angular": "^1.6.2",

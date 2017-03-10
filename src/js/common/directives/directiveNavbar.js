@@ -8,6 +8,27 @@
 
 angular.module('knt')
 
-.directive('kNavbar', function(){
+.directive('kNavbar', ['$translate', function($translate){
+    return {
+        restrict   : "AE",
+        scope      : {
+            navList: '=',
+        },
+        templateUrl: "../views/common/templates/partials/k-navbar.html",
 
-})
+        link       : function (scope, link, attrs) {
+            /**
+             * Define globle variables
+             */
+
+
+
+            /**
+             * Functionality
+             */
+            $(".button-collapse").sideNav({
+                draggable: true,
+            });
+        }
+    };
+}]);
