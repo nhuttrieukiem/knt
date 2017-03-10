@@ -1,0 +1,20 @@
+
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">
+            <i class="icon-people"></i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li ng-repeat="nav in navList">
+                <a href="{{nav.url}}">{{nav.label}}</a>
+            </li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+           <li ng-repeat="nav in navList">
+                <a href="{{nav.url}}">{{nav.label}}</a>
+            </li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="icon-menu"></i></a>
+    </div>
+</nav>
