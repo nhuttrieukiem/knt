@@ -26,12 +26,40 @@ var knt = angular.module('knt', [
     $scope.navList = [
         {
             label: $translate.instant('MENU_ITEM.HOME'),
-            url  : "/" 
+            url  : "/",
+            subMenu: [],
+            id: "menu-home"
+        },
+        
+        {
+            label: $translate.instant('MENU_ITEM.ABOUT'),
+            url  : "/about",
+            subMenu: [
+                {
+                    label: $translate.instant('MENU_ITEM.ABOUT_SCHOOL'),
+                    url  : "/about/about-school",
+                    id   : "menu-about"
+                },
+                {
+                    label: $translate.instant('MENU_ITEM.ABOUT_HISORY'),
+                    url  : "/about/school-history",
+                    id   : "menu-about"
+                },
+
+                {
+                    label: $translate.instant('MENU_ITEM.ABOUT_FACILITIES'),
+                    url  : "/about/school-facilities",
+                    id   : "menu-about"
+                }
+            ],
+            id: "menu-about" 
         },
 
         {
-            label: "Contact",
-            url  : "/contact" 
+            label: $translate.instant('MENU_ITEM.CONTACT'),
+            url  : "/contact",
+            subMenu: [],
+            id: "menu-contact"
         },
     ];
 

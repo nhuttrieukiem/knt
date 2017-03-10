@@ -1,20 +1,32 @@
+<ul ng-repeat="subNav in subNavList" id="{{subNav[0].id}}" class="dropdown-content">
+    <li ng-repeat="nav in subNav">
+        <a class="waves-effect waves-light" href="{{nav.url}}">{{nav.label}} </a>
+    </li>
+</ul>
+<div class="navbar-fixed">
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">
+                K-UI 
+            </a>
 
-<nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">
-            <i class="icon-people"></i>
-        </a>
-        <ul class="right hide-on-med-and-down">
-            <li ng-repeat="nav in navList">
-                <a href="{{nav.url}}">{{nav.label}}</a>
-            </li>
-        </ul>
+            <ul class="right hide-on-med-and-down">
+                <li ng-repeat="nav in navList">
+                    <a href="{{nav.url}}" class="waves-effect waves-light" ng-class="{'dropdown-button': nav.subMenu.length > 0}" data-activates="{{nav.subMenu.length > 0 ? nav.id : ''}}">
+                        {{nav.label}}
+                        <i class="icon-arrow_drop_down right" ng-if="nav.subMenu.length > 0"></i>
+                    </a>
+                </li>
+                <li><a class="waves-effect waves-light" href="/"><i class="icon-person"></i></a></li>
+            </ul>
 
-        <ul id="nav-mobile" class="side-nav">
-           <li ng-repeat="nav in navList">
-                <a href="{{nav.url}}">{{nav.label}}</a>
-            </li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="icon-menu"></i></a>
-    </div>
-</nav>
+            <ul id="nav-mobile" class="side-nav">
+                <li ng-repeat="nav in navList">
+                    <a href="{{nav.url}}">{{nav.label}}</a>
+                </li>
+            </ul>
+
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="icon-menu"></i></a>
+        </div>
+    </nav>
+</div>

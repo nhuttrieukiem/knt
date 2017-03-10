@@ -8,27 +8,46 @@
 
 angular.module('knt')
 
-.directive('kNavbar', ['$translate', function($translate){
-    return {
-        restrict   : "AE",
-        scope      : {
-            navList: '=',
-        },
-        templateUrl: "../views/common/templates/partials/k-navbar.html",
+    .directive('kNavbar', ['$translate', function ($translate) {
+        return {
+            restrict: "AE",
+            scope: {
+                navList: '=',
+            },
+            templateUrl: "../views/common/templates/partials/k-navbar.html",
 
-        link       : function (scope, link, attrs) {
-            /**
-             * Define globle variables
-             */
+            link: function (scope, link, attrs) {
+                /**
+                 * Define globle variables
+                 */
 
+                scope.subNavList = [];
 
+                angular.forEach(scope.navList, function(item, index){
+                    if(item.subMenu.length > 0) {
+                        scope.subNavList.push(item.subMenu);
+                    }
+                });
 
-            /**
-             * Functionality
-             */
-            $(".button-collapse").sideNav({
-                draggable: true,
-            });
-        }
-    };
-}]);
+                /**
+                 * Functionality
+                 */
+                $(document).ready(function () {
+                    
+                    // set up side nav
+                    $(".button-collapse").sideNav({
+                        draggable: true,
+                    });
+
+                    // dropdown toggle
+                    $(".dropdown-button").dropdown({
+                        hover: true,
+                        belowOrigin: true,
+                        constrainWidth: false,
+                        gutter: 1
+                    });
+                });              
+
+            }
+        };
+    }]);
