@@ -12,7 +12,7 @@ angular.module('knt')
         return {
             restrict: "AE",
             scope: {
-
+                slideItems: "=",
             },
             templateUrl: "../views/common/templates/partials/k-slideshow.html",
 
@@ -26,7 +26,9 @@ angular.module('knt')
                  * Functionality
                  */
                 $(document).ready(function () {
-                    $('.slider').slider();
+                    $('.slider').slider({
+                        indicators: false,
+                    });
                 });
 
             }
