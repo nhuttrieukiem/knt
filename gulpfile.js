@@ -69,7 +69,7 @@ var kui_common = [
 // create default gulp task 
 gulp.task('default', function (callback) {
     runSequence('clean', 'image-compress', 'copy-views',
-        'build-css-lib', 'build-css-pages', 'copy-fonts',
+        'build-css-lib', 'build-css-pages', 'build-css-elements', 'copy-fonts',
         'iconfont', 'build-js-lib',
         'build-js-kui', 'build-js-common', 'build-js-pages', 'copy-master-page',
         'watch', callback);
@@ -190,6 +190,12 @@ gulp.task('watch', function () {
         name: 'CSS_PAGES',
         emitOnGlob: false
     }, queue.getHandler('clean-css-pages', 'build-css-pages'));
+
+    //watch css elements
+    watch(paths.styleSource + 'elements', {
+        name: 'CSS_ELEMENTS',
+        emitOnGlob: false
+    }, queue.getHandler('clean-css-elements', 'build-css-elements'));
 });
 
 // build iconfont
@@ -294,7 +300,7 @@ gulp.task('copy-views', function () {
 });
 
 gulp.task('start-server', function (cb) {
-    exec('lite-server -c lite-server.js', function (err, stdout, stderr) {
+    exec('http-server dist/', function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
         cb(err);
@@ -312,5 +318,18 @@ gulp.task('build-css-pages', function () {
 // clean css pages
 gulp.task('clean-css-pages', function () {
     return del(paths.styleDist + 'k-ui-pages.css');
+});
+
+// build css elements
+gulp.task('build-css-elements', function () {
+    return gulp.src(paths.styleSource + 'elements/*.styl')
+        .pipe(stylus())
+        .pipe(concat('k-ui-elements.css'))
+        .pipe(gulp.dest(paths.styleDist));
+});
+
+// clean css elements
+gulp.task('clean-css-elements', function () {
+    return del(paths.styleDist + 'k-ui-elements.css');
 });
 

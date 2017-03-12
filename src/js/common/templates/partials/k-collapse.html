@@ -1,0 +1,13 @@
+
+
+<ul class="collapsible k-collapse" data-collapsible="accordion">
+    <li>
+        <div class="collapsible-header" ng-class="{'active': data.is_active}">
+            <i class="{{data.header_icon}}"></i>
+            <span translate="{{data.rawHeader}}">{{data.header}}</span>
+        </div>
+        <div class="collapsible-body active" ng-transclude="body">
+            
+        </div>
+    </li>
+</ul>

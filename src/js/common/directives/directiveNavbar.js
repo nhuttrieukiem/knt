@@ -22,9 +22,10 @@ angular.module('knt')
                  */
 
                 scope.subNavList = [];
+                scope.lang = "vi";
 
-                angular.forEach(scope.navList, function(item, index){
-                    if(item.subMenu.length > 0) {
+                angular.forEach(scope.navList, function (item, index) {
+                    if (item.subMenu.length > 0) {
                         scope.subNavList.push(item.subMenu);
                     }
                 });
@@ -33,7 +34,7 @@ angular.module('knt')
                  * Functionality
                  */
                 $(document).ready(function () {
-                    
+
                     // set up side nav
                     $(".button-collapse").sideNav({
                         draggable: true,
@@ -46,7 +47,12 @@ angular.module('knt')
                         constrainWidth: false,
                         gutter: 1
                     });
-                });              
+                });
+
+                scope.changeLanguage = function () {
+                    scope.lang = scope.lang === "vi" ? "en" : "vi";
+                    $translate.use(scope.lang);
+                };
 
             }
         };

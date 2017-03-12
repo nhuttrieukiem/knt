@@ -11,6 +11,7 @@ angular.module('knt')
     $scope.navList = [
         {
             label: $translate.instant('MENU_ITEM.HOME'),
+            rawLabel: "MENU_ITEM.HOME",
             url  : "/",
             subMenu: [],
             id: "menu-home"
@@ -18,21 +19,25 @@ angular.module('knt')
         
         {
             label: $translate.instant('MENU_ITEM.ABOUT'),
+            rawLabel: "MENU_ITEM.ABOUT",
             url  : "/about",
             subMenu: [
                 {
                     label: $translate.instant('MENU_ITEM.ABOUT_SCHOOL'),
+                    rawLabel: "MENU_ITEM.ABOUT_SCHOOL",
                     url  : "/about/about-school",
                     id   : "menu-about"
                 },
                 {
                     label: $translate.instant('MENU_ITEM.ABOUT_HISORY'),
+                    rawLabel: "MENU_ITEM.ABOUT_HISORY",
                     url  : "/about/school-history",
                     id   : "menu-about"
                 },
 
                 {
                     label: $translate.instant('MENU_ITEM.ABOUT_FACILITIES'),
+                    rawLabel: "MENU_ITEM.ABOUT_FACILITIES",
                     url  : "/about/school-facilities",
                     id   : "menu-about"
                 }
@@ -42,6 +47,7 @@ angular.module('knt')
 
         {
             label: $translate.instant('MENU_ITEM.CONTACT'),
+            rawLabel: "MENU_ITEM.CONTACT",
             url  : "/contact",
             subMenu: [],
             id: "menu-contact"
@@ -74,6 +80,41 @@ angular.module('knt')
             caption: "Here's our small slogan.",
         }
     ];
+
+    $scope.newsWidget = {
+        header: $translate.instant('SIDE_BAR_WIDGET.NEWS'),
+        rawHeader: "SIDE_BAR_WIDGET.NEWS",
+        header_icon  : "icon-keyboard_arrow_right",
+        is_active: true,
+    }
+
+    $scope.docsWidget = {
+        header: $translate.instant('SIDE_BAR_WIDGET.DOCS'),
+        rawHeader: "SIDE_BAR_WIDGET.DOCS",
+        header_icon  : "icon-keyboard_arrow_right",
+        is_active: true,
+    }
+
+    $scope.schoolNewsWidget = {
+        header: $translate.instant('SIDE_BAR_WIDGET.SCHOOL_NEWS'),
+        rawHeader: "SIDE_BAR_WIDGET.SCHOOL_NEWS",
+        header_icon  : "icon-keyboard_arrow_right",
+        is_active: true,
+    }
+
+    $scope.teacherDocsWidget = {
+        header: $translate.instant('SIDE_BAR_WIDGET.TEACHER_DOCS'),
+        rawHeader: "SIDE_BAR_WIDGET.TEACHER_DOCS",
+        header_icon  : "icon-keyboard_arrow_right",
+        is_active: true,
+    }
+
+    $scope.studentDocsWidget = {
+        header: $translate.instant('SIDE_BAR_WIDGET.STUDENT_DOCS'),
+        rawHeader: "SIDE_BAR_WIDGET.STUDENT_DOCS",
+        header_icon  : "icon-keyboard_arrow_right",
+        is_active: true,
+    }
 
 
 }]);
