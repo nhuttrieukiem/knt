@@ -1,0 +1,6 @@
+<!-- Basic collecion template -->
+<ul class="collection {{id}}" ng-if="type === COLLECTION_TYPE.BASIC">
+    <li class="collection-item" ng-repeat="item in data">
+        <div>{{item.title}}<a href="{{item.url}}" class="secondary-content"><i class="{{item.icon_class}}"></i></a></div>
+    </li>
+</ul>

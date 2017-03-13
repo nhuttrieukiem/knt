@@ -3,7 +3,7 @@ angular.module('knt')
 /**
  * This controller was created for handling some function in master page
  */
-.controller('baseCtrl', ['$scope', '$translate', function($scope, $translate){
+.controller('baseCtrl', ['$scope', '$translate','COLLECTION_TYPE', function($scope, $translate, COLLECTION_TYPE){
     /**
      * Define variables
      */
@@ -86,42 +86,68 @@ angular.module('knt')
         rawHeader: "SIDE_BAR_WIDGET.NEWS",
         header_icon  : "icon-keyboard_arrow_right",
         is_active: true,
-    }
+    };
 
     $scope.docsWidget = {
         header: $translate.instant('SIDE_BAR_WIDGET.DOCS'),
         rawHeader: "SIDE_BAR_WIDGET.DOCS",
         header_icon  : "icon-keyboard_arrow_right",
         is_active: true,
-    }
+    };
 
     $scope.schoolNewsWidget = {
         header: $translate.instant('SIDE_BAR_WIDGET.SCHOOL_NEWS'),
         rawHeader: "SIDE_BAR_WIDGET.SCHOOL_NEWS",
         header_icon  : "icon-keyboard_arrow_right",
         is_active: true,
-    }
+    };
 
     $scope.teacherDocsWidget = {
         header: $translate.instant('SIDE_BAR_WIDGET.TEACHER_DOCS'),
         rawHeader: "SIDE_BAR_WIDGET.TEACHER_DOCS",
         header_icon  : "icon-keyboard_arrow_right",
         is_active: true,
-    }
+    };
 
     $scope.studentDocsWidget = {
         header: $translate.instant('SIDE_BAR_WIDGET.STUDENT_DOCS'),
         rawHeader: "SIDE_BAR_WIDGET.STUDENT_DOCS",
         header_icon  : "icon-keyboard_arrow_right",
         is_active: true,
-    }
+    };
 
     $scope.searchWidget = {
         header: $translate.instant('SEARCH'),
         rawHeader: "SEARCH",
         header_icon  : "icon-keyboard_arrow_right",
         is_active: true,
-    }
+    };
+
+    $scope.basicCollections = [
+        {
+            title: "Lorem ipsum dolor sit amet",
+            url: "/",
+            icon_class: "icon-star",
+        },
+
+        {
+            title: "Lorem ipsum dolor sit amet",
+            url: "/",
+            icon_class: "icon-star",
+        },
+
+        {
+            title: "Lorem ipsum dolor sit amet",
+            url: "/",
+            icon_class: "icon-star",
+        },
+
+        {
+            title: "Lorem ipsum dolor sit amet",
+            url: "/",
+            icon_class: "icon-star",
+        }
+    ];
 
 
 }]);
