@@ -116,5 +116,12 @@ angular.module('knt')
         is_active: true,
     }
 
+    $scope.searchWidget = {
+        header: $translate.instant('SEARCH'),
+        rawHeader: "SEARCH",
+        header_icon  : "icon-keyboard_arrow_right",
+        is_active: true,
+    }
+
 
 }]);

@@ -31,7 +31,9 @@ angular.module('knt')
           DOCS: "Documents",
           YOUTH_GROUP: "Youth group information",
           EXAM_RESULT: "Exam result"
-      }
+      },
+
+      SEARCH: "Search"
   });
 
   $translateProvider.translations('vi', {
@@ -54,7 +56,9 @@ angular.module('knt')
           DOCS: "Tài liệu",
           YOUTH_GROUP: "Thông tin đoàn thanh niên",
           EXAM_RESULT: "Kết quả thi"
-      }
+      },
+
+      SEARCH: "Tìm kiếm"
   });
 
   $translateProvider.translations('km', {

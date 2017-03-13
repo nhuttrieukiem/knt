@@ -40,15 +40,17 @@ var paths = {
 
 // library paths
 var lib = [
-    'node_modules/angular/angular.js',                     // => for debug
+    'node_modules/angular/angular.js',                     
     //'node_modules/angular/angular.min.js',
-    'node_modules/angular-route/angular-route.js',         // => for debug
+    'node_modules/angular-route/angular-route.js',         
     //node_modules/angular-route/angular-route.min.js',
-    'node_modules/jquery/dist/jquery.js',                       // => for debug
+    'node_modules/jquery/dist/jquery.js',                       
     //node_modules/jquery/dist/jquery.min.js',
-    'node_modules/materialize-css/dist/js/materialize.js', // => for debug
+    'node_modules/jquery.marquee/jquery.marquee.js',                       
+    //node_modules/jquery.marquee/jquery.marquee.min.js',
+    'node_modules/materialize-css/dist/js/materialize.js', 
     //'node_modules/materialize-css/dist/js/materialize.min.js', 
-    'node_modules/angular-translate/dist/angular-translate.js',                       // => for debug
+    'node_modules/angular-translate/dist/angular-translate.js',                 
     //'node_modules/angular-translate/dist/angular-translate.min.js',
 ];
 
