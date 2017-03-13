@@ -13,6 +13,7 @@ angular.module('knt')
             restrict: "AE",
             scope: {
                 data: "=",
+                headerColor: "@?"
             },
 
             transclude: {
@@ -24,6 +25,7 @@ angular.module('knt')
                 /**
                  * Define globle variables
                  */
+                scope.headerColor = angular.isUndefined(scope.headerColor) ? "#29B6F6" : scope.headerColor;
 
 
                 /**
