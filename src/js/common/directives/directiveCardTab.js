@@ -25,7 +25,9 @@ angular.module('knt')
                  * Functionality
                  */
                 $(document).ready(function () {
-                    $('ul.tabs').tabs();
+                    $('ul.tabs').tabs({
+                        swipeable: true,
+                    });
                 });
 
             }
