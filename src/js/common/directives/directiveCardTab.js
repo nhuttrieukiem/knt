@@ -9,7 +9,7 @@ angular.module('knt')
 
     .directive('kCardTab', ['$translate', function ($translate) {
         return {
-            restrict: "AE",
+            restrict: "EA",
             scope: {
             },
 
@@ -25,6 +25,7 @@ angular.module('knt')
                  * Functionality
                  */
                 $(document).ready(function () {
+                    $('ul.tabs').tabs();
                 });
 
             }
