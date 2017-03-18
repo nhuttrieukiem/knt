@@ -14,7 +14,7 @@ angular.module('knt')
                 data: "=",
             },
 
-            templateUrl: "../views/common/templates/partials/k-carousel.html",
+            templateUrl: "dist/views/common/templates/partials/k-carousel.html",
 
             link: function (scope, link, attrs) {
                 /**

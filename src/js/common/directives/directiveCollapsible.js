@@ -19,7 +19,7 @@ angular.module('knt')
             transclude: {
                 'body': '?collapseBody',
             },
-            templateUrl: "../views/common/templates/partials/k-collapse.html",
+            templateUrl: "dist/views/common/templates/partials/k-collapse.html",
 
             link: function (scope, link, attrs) {
                 /**

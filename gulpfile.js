@@ -289,7 +289,7 @@ gulp.task('clean-css-lib', function () {
 // Copy master page
 gulp.task('copy-master-page', function () {
     console.log("Master page had been reloaded");
-    return gulp.src("src/index.html").pipe(gulp.dest("dist"));
+    return gulp.src("src/index.html").pipe(gulp.dest("."));
 });
 
 //copy fonts

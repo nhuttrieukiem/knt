@@ -14,7 +14,7 @@ angular.module('knt')
                 data: "=",
             },
 
-            templateUrl: "../views/common/templates/partials/k-card-tab.html",
+            templateUrl: "dist/views/common/templates/partials/k-card-tab.html",
 
             link: function (scope, link, attrs) {
                 /**

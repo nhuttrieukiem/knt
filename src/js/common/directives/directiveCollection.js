@@ -17,7 +17,7 @@ angular.module('knt')
                 direction: "@?",
                 id:        "@"
             },
-            templateUrl: "../views/common/templates/partials/k-collections.html",
+            templateUrl: "dist/views/common/templates/partials/k-collections.html",
 
             link: function (scope, link, attrs) {
                 /**
