@@ -11,6 +11,7 @@ angular.module('knt')
         return {
             restrict: "EA",
             scope: {
+                data: "=",
             },
 
             templateUrl: "../views/common/templates/partials/k-card-tab.html",
