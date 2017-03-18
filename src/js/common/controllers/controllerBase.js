@@ -125,87 +125,101 @@ angular.module('knt')
 
         $scope.basicCollections = [
             {
-                title: "Lorem ipsum dolor sit amet",
+                title: "Lorem ipsum dolor sit amet 2",
                 url: "/",
                 icon_class: "icon-star",
+                thumb: "images/av1.jpg",
+                short_content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit...",
+                date_created: moment(),
             },
 
             {
                 title: "Lorem ipsum dolor sit amet",
                 url: "/",
                 icon_class: "icon-star",
+                thumb: "images/av2.jpg",
+                short_content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit...",
+                date_created: moment(),
             },
 
             {
                 title: "Lorem ipsum dolor sit amet",
                 url: "/",
                 icon_class: "icon-star",
+                thumb: "images/av3.jpg",
+                short_content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit...",
+                date_created: moment(),
             },
 
             {
                 title: "Lorem ipsum dolor sit amet",
                 url: "/",
                 icon_class: "icon-star",
+                thumb: "images/av4.jpg",
+                short_content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit...",
+                date_created: moment(),
             }
         ];
 
         $scope.tabWidget = [
             {
-                header: $translate.instant('SIDE_BAR_WIDGET.STUDENT_SCHEDULE'),
+                header: 'SIDE_BAR_WIDGET.STUDENT_SCHEDULE',
                 tabId : 'student_schedule_tab',
-                element: $scope.basicCollections = [
+                isActive: true,
+                element: [
                     {
                         title: "Lorem ipsum dolor sit amet",
                         url: "/",
-                        icon_class: "icon-star",
+                        icon_class: "icon-date_range",
                     },
 
                     {
                         title: "Lorem ipsum dolor sit amet",
                         url: "/",
-                        icon_class: "icon-star",
+                        icon_class: "icon-date_range",
                     },
 
                     {
                         title: "Lorem ipsum dolor sit amet",
                         url: "/",
-                        icon_class: "icon-star",
+                        icon_class: "icon-date_range",
                     },
 
                     {
                         title: "Lorem ipsum dolor sit amet",
                         url: "/",
-                        icon_class: "icon-star",
+                        icon_class: "icon-date_range",
                     }
                 ]
             },
 
             {
-                header: $translate.instant('SIDE_BAR_WIDGET.TEACHER_SCHEDULE'),
+                header: 'SIDE_BAR_WIDGET.WORKING_SCHEDULE',
                 tabId : 'teacher_schedule_tab',
-                element: $scope.basicCollections = [
+                isActive: false,
+                element: [
                     {
                         title: "Lorem ipsum dolor sit amet",
                         url: "/",
-                        icon_class: "icon-star",
+                        icon_class: "icon-date_range",
                     },
 
                     {
                         title: "Lorem ipsum dolor sit amet",
                         url: "/",
-                        icon_class: "icon-star",
+                        icon_class: "icon-date_range",
                     },
 
                     {
                         title: "Lorem ipsum dolor sit amet",
                         url: "/",
-                        icon_class: "icon-star",
+                        icon_class: "icon-date_range",
                     },
 
                     {
                         title: "Lorem ipsum dolor sit amet",
                         url: "/",
-                        icon_class: "icon-star",
+                        icon_class: "icon-date_range",
                     }
                 ]
             }

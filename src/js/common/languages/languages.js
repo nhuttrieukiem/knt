@@ -48,8 +48,8 @@ angular.module('knt')
 
       SIDE_BAR_WIDGET: {
           NEWS: "Tin tức - sự kiện",
-          WORKING_SCHEDULE: "Working schedule",
-          STUDENT_SCHEDULE: "Student schedule",
+          WORKING_SCHEDULE: "Lịch công tác",
+          STUDENT_SCHEDULE: "Thời khóa biểu",
           SCHOOL_NEWS: "Tin tức nhà trường",
           TEACHER_DOCS: "Thông tin giáo viên",
           STUDENT_DOCS: "Thông tin học sinh",

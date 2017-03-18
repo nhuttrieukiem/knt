@@ -21,6 +21,8 @@ angular.module('knt')
                  * Define globle variables
                  */
 
+                console.log(scope.data);
+
 
                 /**
                  * Functionality

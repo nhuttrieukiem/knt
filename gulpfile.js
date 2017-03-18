@@ -52,6 +52,9 @@ var lib = [
     //'node_modules/materialize-css/dist/js/materialize.min.js', 
     'node_modules/angular-translate/dist/angular-translate.js',                 
     //'node_modules/angular-translate/dist/angular-translate.min.js',
+    'node_modules/moment/min/moment-with-locales.js',                 
+    //'node_modules/moment/min/moment-with-locales.min.js',
+
 ];
 
 var css_lib = [

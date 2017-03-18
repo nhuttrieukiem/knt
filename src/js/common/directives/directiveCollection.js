@@ -25,6 +25,7 @@ angular.module('knt')
                  */
                 var directions = ["up", "down", "left", "right"];
                 scope.COLLECTION_TYPE = COLLECTION_TYPE;
+                console.log(scope.data);
 
                 /**
                  * Functionality

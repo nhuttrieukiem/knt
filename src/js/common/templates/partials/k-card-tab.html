@@ -1,38 +1,19 @@
+
 <div class="col s12 no-padding k-card-tab">
     <ul class="tabs tabs-fixed-width light-blue lighten-1">
-        <li class="tab col s3"><a href="#test1">Thời khóa biểu</a></li>
-        <li class="tab col s3"><a class="active" href="#test2">Lịch công tác</a></li>
-    </ul>
-</div>
-<div id="test1" class="col s12 no-padding">
-    <ul class="collection">
-        <li class="collection-item dismissable">
-            <div>Lorem ipsum dolor sit amet<a href="#!" class="secondary-content"><i class="icon-date_range"></i></a></div>
-        </li>
-        <li class="collection-item dismissable">
-            <div>Consectetur adipiscing elit<a href="#!" class="secondary-content"><i class="icon-date_range"></i></a></div>
-        </li>
-        <li class="collection-item dismissable">
-            <div>Eed do eiusmod tempor<a href="#!" class="secondary-content"><i class="icon-date_range"></i></a></div>
-        </li>
-        <li class="collection-item dismissable">
-            <div>Et dolore magna aliqua<a href="#!" class="secondary-content"><i class="icon-date_range"></i></a></div>
+        <li class="tab col s3" ng-repeat="item in data">
+            <a href="#{{item.tabId}}" translate="{{item.header}}">{{item.header}}</a>
         </li>
     </ul>
 </div>
-<div id="test2" class="col s12 no-padding">
+<div ng-repeat="item in data" id="{{item.tabId}}" class="col s12 no-padding">
     <ul class="collection">
-        <li class="collection-item dismissable">
-            <div>Lorem ipsum dolor sit amet<a href="#!" class="secondary-content"><i class="icon-date_range"></i></a></div>
-        </li>
-        <li class="collection-item dismissable">
-            <div>Consectetur adipiscing elit<a href="#!" class="secondary-content"><i class="icon-date_range"></i></a></div>
-        </li>
-        <li class="collection-item dismissable">
-            <div>Eed do eiusmod tempor<a href="#!" class="secondary-content"><i class="icon-date_range"></i></a></div>
-        </li>
-        <li class="collection-item dismissable">
-            <div>Et dolore magna aliqua<a href="#!" class="secondary-content"><i class="icon-date_range"></i></a></div>
+        <li class="collection-item dismissable"ng-repeat="li in item.element">
+            <div>{{li.title}}
+                <a href="{{li.url}}" class="secondary-content">
+                    <i class="{{li.icon_class}}"></i>
+                </a>
+            </div>
         </li>
     </ul>
 </div>
