@@ -45,7 +45,7 @@ I am completing the documents after, please wait :-)
 
 ## Authors
 
-* **Triều Kiêm (kntrieu)** - *Initial work* - [PurpleBooth](https://github.com/nhuttrieukiem/)
+* **Triều Kiêm (kntrieu)** - *Initial work* - [nhuttrieukiem](https://github.com/nhuttrieukiem/)
 
 
 ## License
