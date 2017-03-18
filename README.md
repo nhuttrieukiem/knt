@@ -12,70 +12,43 @@ Clone or download this source code to your local machine.
 
 ### Installing
 
-1. Install gulp as globel
+1. Install gulp, http-server as globle
 
 ```
 npm install -g gulp 
+
+npm install -g http-server
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+2. After that, we have to install all required packages
 
 ```
-Give an example
+npm install
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+3. When packages is installed successfully, run gulp to build the dist folder
 
 ```
-Give an example
+gulp
 ```
 
-## Deployment
+4. After that, open another cmd to start server
 
-Add additional notes about how to deploy this on a live system
+```
+npm start
+```
 
-## Built With
+Now your server is running at port 1812, to try it, access http://localhost:1812
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+I am completing the documents after, please wait :-)
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Triều Kiêm (kntrieu)** - *Initial work* - [PurpleBooth](https://github.com/nhuttrieukiem/)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
