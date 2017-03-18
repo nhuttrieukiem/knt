@@ -1,27 +1,21 @@
-# Project Title
+# K-UI
 
-One Paragraph of project description goes here
+An UI framework base on AngularJS and Materiallize css
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Clone or download this source code to your local machine.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+### Prerequisites 
+1. NodeJS: https://nodejs.org/en/
+2. Git: https://git-scm.com/downloads
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+1. Install gulp as globel
 
 ```
-Give the example
+npm install -g gulp 
 ```
 
 And repeat
