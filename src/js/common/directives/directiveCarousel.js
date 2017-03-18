@@ -1,20 +1,20 @@
 /**
- * Directive card tab
+ * Directive carousel
  * Created by kntrieu
- * Date created: March 13, 2017
- * Usage <k-card-tab></k-card-tab>
+ * Date created: March 18, 2017
+ * Usage <k-carousel></k-cảousel>
  */
 
 angular.module('knt')
 
-    .directive('kCardTab', ['$translate', function ($translate) {
+    .directive('kCarousel', ['$translate', function ($translate) {
         return {
             restrict: "EA",
             scope: {
                 data: "=",
             },
 
-            templateUrl: "../views/common/templates/partials/k-card-tab.html",
+            templateUrl: "../views/common/templates/partials/k-carousel.html",
 
             link: function (scope, link, attrs) {
                 /**
@@ -27,9 +27,10 @@ angular.module('knt')
                  * Functionality
                  */
                 $(document).ready(function () {
-                    $('ul.tabs').tabs({
-                        swipeable: true,
-                    });
+                    $('.carousel.carousel-slider').carousel({ fullWidth: true });
+                    setInterval(function(){ 
+                        $('.carousel.carousel-slider').carousel('next');
+                    }, 5000);
                 });
 
             }

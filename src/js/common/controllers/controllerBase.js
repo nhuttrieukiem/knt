@@ -225,5 +225,69 @@ angular.module('knt')
             }
         ];
 
+        $scope.tab2Widget = [
+            {
+                header: 'SIDE_BAR_WIDGET.TEACHER_DOCS',
+                tabId : 'teacher_docs_tab',
+                isActive: true,
+                element: [
+                    {
+                        title: "Lorem ipsum dolor sit amet",
+                        url: "/",
+                        icon_class: "icon-date_range",
+                    },
+
+                    {
+                        title: "Lorem ipsum dolor sit amet",
+                        url: "/",
+                        icon_class: "icon-date_range",
+                    },
+
+                    {
+                        title: "Lorem ipsum dolor sit amet",
+                        url: "/",
+                        icon_class: "icon-date_range",
+                    },
+
+                    {
+                        title: "Lorem ipsum dolor sit amet",
+                        url: "/",
+                        icon_class: "icon-date_range",
+                    }
+                ]
+            },
+
+            {
+                header: 'SIDE_BAR_WIDGET.STUDENT_DOCS',
+                tabId : 'student_docs_tab',
+                isActive: false,
+                element: [
+                    {
+                        title: "Lorem ipsum dolor sit amet",
+                        url: "/",
+                        icon_class: "icon-date_range",
+                    },
+
+                    {
+                        title: "Lorem ipsum dolor sit amet",
+                        url: "/",
+                        icon_class: "icon-date_range",
+                    },
+
+                    {
+                        title: "Lorem ipsum dolor sit amet",
+                        url: "/",
+                        icon_class: "icon-date_range",
+                    },
+
+                    {
+                        title: "Lorem ipsum dolor sit amet",
+                        url: "/",
+                        icon_class: "icon-date_range",
+                    }
+                ]
+            }
+        ];
+
 
     }]);

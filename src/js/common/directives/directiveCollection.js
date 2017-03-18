@@ -8,7 +8,7 @@
 
 angular.module('knt')
 
-    .directive('kCollection', ['$translate', 'COLLECTION_TYPE', function ($translate, COLLECTION_TYPE) {
+    .directive('kCollection', ['$translate', 'COLLECTION_TYPE', 'CONSTANTS', function ($translate, COLLECTION_TYPE, CONSTANTS) {
         return {
             restrict: "AE",
             scope: {
@@ -23,9 +23,9 @@ angular.module('knt')
                 /**
                  * Define globle variables
                  */
-                var directions = ["up", "down", "left", "right"];
+                var directions        = ["up", "down", "left", "right"];
                 scope.COLLECTION_TYPE = COLLECTION_TYPE;
-                console.log(scope.data);
+                scope.CONSTANTS       = CONSTANTS;
 
                 /**
                  * Functionality
@@ -34,7 +34,7 @@ angular.module('knt')
                     if(scope.direction && directions.indexOf(scope.direction) > -1) {
                         $('.' + scope.id).marquee({
                             duration: 5000,
-                            direction: "up",
+                            direction: scope.direction,
                             duplicated: true,
                             gap: "10px",
                             allowCss3Support: true,
