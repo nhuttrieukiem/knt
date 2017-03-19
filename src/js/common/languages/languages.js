@@ -31,7 +31,8 @@ angular.module('knt')
           DOCS: "Documents",
           YOUTH_GROUP: "Youth group information",
           EXAM_RESULT: "Exam result",
-          VIDEO: "Video"
+          VIDEO: "Video",
+          FRIENDS: "Friends"
       },
 
       SEARCH: "Search"
@@ -44,7 +45,7 @@ angular.module('knt')
           ABOUT  : "Giới thiệu",
           ABOUT_SCHOOL: "Giới thiệu về trường",
           ABOUT_HISORY: "Lịch sử của trường",
-          ABOUT_FACILITIES: "Cơ sở vật chất"
+          ABOUT_FACILITIES: "Cơ sở vật chất",
       },
 
       SIDE_BAR_WIDGET: {
@@ -57,7 +58,8 @@ angular.module('knt')
           DOCS: "Tài liệu",
           YOUTH_GROUP: "Thông tin đoàn thanh niên",
           EXAM_RESULT: "Kết quả thi",
-          VIDEO: "Video"
+          VIDEO: "Video",
+          FRIENDS: "Đơn vị Kết Nghĩa"
       },
 
       SEARCH: "Tìm kiếm"

@@ -1,55 +1,30 @@
- <style>
-  * {
-   box-sizing: border-box;
-  }
-  body {
-   font-family: Helvetica, Verdana, sans-serif;
-  }
-  .wrap {
-   max-width: 800px;
-   margin: 0 auto;
-  }
-  .glyphs-list {
-   margin: 0;
-   padding: 0;
-   list-style: none
-  }
-  .glyphs-list li {
-   float: left;
-   width: 25%;
-   padding: 16px;
-   text-align: center;
-  }
-  .glyphs-list li:hover {
-   cursor: default;
-   background: #fafafa;
-  }
-  .glyphs-list li:nth-child(4n+1) {
-   clear: left;
-  }
-  .glyphs-list i {
-   font-size: 48px;
-   line-height: 1;
-  }
-  .glyphs-list code {
-   display: block;
-   margin: 16px 0 0;
-  }
-  .glyphs-list input {
-   display: block;
-   width: 100%;
-   margin: 16px 0 0;
-  }
- </style>
-<div class="wrap">
-  <h1><%= fontName %> - glyphs list</h1>
-  <ul class="glyphs-list">
-   <% _.each(glyphs, function(icon){ %>
-   <li>
-    <i class="icon-<%= icon.name %>"></i>
-    <code>\<%= icon.unicode[0].charCodeAt(0).toString(16) %></code>
-    <input type="text" value="icon-<%= icon.name %>" readonly="true"/>
-   </li>
-   <% }) %>
-  </ul>
- </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ICONS GUIDS</title>
+  <link rel="stylesheet" href="../css/k-ui-lib.css">
+  <link rel="stylesheet" href="iconfont.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>K-UI ICONS</h1>
+    <ul class="collection">
+      <% _.each(glyphs, function(icon){ %>
+        <li class="collection-item avatar">
+          <i class="icon-<%= icon.name %> circle green"></i>
+          <code class="title">\<%= icon.unicode[0].charCodeAt(0).toString(16) %></code>
+          <p>icon-<%= icon.name %></p>
+          <a href="#!" class="secondary-content"></a>
+        </li>
+        <% }) %>
+    </ul>
+  </div>
+  
+
+</body>
+
+</html>

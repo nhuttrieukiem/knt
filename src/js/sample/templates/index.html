@@ -12,12 +12,12 @@
         <div class="col s12 m4">
             <k-collapse data="newsWidget" header-color="#1e88e5">
                 <collapse-body>
-                    <k-collection data="basicCollections" type="0" id="news-widget" direction="up"></k-collection>
+                    <k-collection data="basicCollections" type="COLLECTION_TYPE.BASIC" id="news-widget" direction="up"></k-collection>
                 </collapse-body>
             </k-collapse>
             <k-collapse data="schoolNewsWidget">
                 <collapse-body>
-                    <k-collection data="basicCollections" type="0" id="school-new-widget"></k-collection>
+                    <k-collection data="basicCollections" type="COLLECTION_TYPE.BASIC" id="school-new-widget"></k-collection>
                 </collapse-body>
             </k-collapse>
             <k-collapse data="videoWidget">
@@ -27,20 +27,13 @@
                     </div>
                 </collapse-body>
             </k-collapse>
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                  <div class="collapsible-header"><i class="icon-filter_drama"></i>First</div>
-                  <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                  <div class="collapsible-header"><i class="icon-star"></i>Second</div>
-                  <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                  <div class="collapsible-header"><i class="icon-whatshot"></i>Third</div>
-                  <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-            </ul>
+            <k-multi-collapse></k-multi-collapse>
+            <k-collapse data="friendWidget">
+                <collapse-body>
+                    <k-collection data="basicCollections2" type="COLLECTION_TYPE.BASIC" id="school-friend-widget"></k-collection>
+                </collapse-body>
+            </k-collapse>
+            
         </div>
         <div class="col s12 m8">
             <k-carousel></k-carousel>
@@ -49,7 +42,7 @@
             <div class="col s12 no-padding">
                 <k-collapse data="docsWidget">
                     <collapse-body>
-                        <k-collection data="basicCollections" type="1" id="documents"></k-collection>
+                        <k-collection data="basicCollections" type="COLLECTION_TYPE.AVATAR_CONTENT" id="documents"></k-collection>
                     </collapse-body>
                 </k-collapse>
             </div>

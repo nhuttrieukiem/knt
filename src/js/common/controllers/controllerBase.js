@@ -8,6 +8,10 @@ angular.module('knt')
          * Define variables
          */
 
+        $(document).ready(function () {
+            $('.parallax').parallax();
+        });
+
         $scope.navList = [
             {
                 label: $translate.instant('MENU_ITEM.HOME'),
@@ -15,6 +19,22 @@ angular.module('knt')
                 url: "/",
                 subMenu: [],
                 id: "menu-home"
+            },
+
+            {
+                label: $translate.instant('SIDE_BAR_WIDGET.NEWS'),
+                rawLabel: "SIDE_BAR_WIDGET.NEWS",
+                url: "/news",
+                subMenu: [],
+                id: "menu-news"
+            },
+
+            {
+                label: $translate.instant('SIDE_BAR_WIDGET.SCHOOL_NEWS'),
+                rawLabel: "SIDE_BAR_WIDGET.SCHOOL_NEWS",
+                url: "/news",
+                subMenu: [],
+                id: "menu-school-news"
             },
 
             {
@@ -85,6 +105,13 @@ angular.module('knt')
             header: $translate.instant('SIDE_BAR_WIDGET.NEWS'),
             rawHeader: "SIDE_BAR_WIDGET.NEWS",
             header_icon: "icon-star",
+            is_active: true,
+        };
+
+        $scope.friendWidget = {
+            header: $translate.instant('SIDE_BAR_WIDGET.FRIENDS'),
+            rawHeader: "SIDE_BAR_WIDGET.FRIENDS",
+            header_icon: "icon-person",
             is_active: true,
         };
 
@@ -168,10 +195,75 @@ angular.module('knt')
             }
         ];
 
+        $scope.basicCollections2 = [
+            {
+                title: "Lorem ipsum dolor sit amet",
+                url: "/",
+                icon_class: "icon-star",
+                thumb: "dist/images/av2.jpg",
+                short_content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit...",
+                date_created: moment(),
+            },
+
+            {
+                title: "Lorem ipsum dolor sit amet",
+                url: "/",
+                icon_class: "icon-star",
+                thumb: "dist/images/av3.jpg",
+                short_content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit...",
+                date_created: moment(),
+            },
+
+            {
+                title: "Lorem ipsum dolor sit amet",
+                url: "/",
+                icon_class: "icon-star",
+                thumb: "dist/images/av4.jpg",
+                short_content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit...",
+                date_created: moment(),
+            },
+
+            {
+                title: "Lorem ipsum dolor sit amet 2",
+                url: "/",
+                icon_class: "icon-star",
+                thumb: "dist/images/av1.jpg",
+                short_content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit...",
+                date_created: moment(),
+            },
+
+            {
+                title: "Lorem ipsum dolor sit amet",
+                url: "/",
+                icon_class: "icon-star",
+                thumb: "dist/images/av2.jpg",
+                short_content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit...",
+                date_created: moment(),
+            },
+
+            {
+                title: "Lorem ipsum dolor sit amet",
+                url: "/",
+                icon_class: "icon-star",
+                thumb: "dist/images/av3.jpg",
+                short_content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit...",
+                date_created: moment(),
+            },
+
+            {
+                title: "Lorem ipsum dolor sit amet",
+                url: "/",
+                icon_class: "icon-star",
+                thumb: "dist/images/av4.jpg",
+                short_content: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit...",
+                date_created: moment(),
+            }
+        ];
+
         $scope.tabWidget = [
             {
                 header: 'SIDE_BAR_WIDGET.STUDENT_SCHEDULE',
-                tabId : 'student_schedule_tab',
+                tabId: 'student_schedule_tab',
                 isActive: true,
                 element: [
                     {
@@ -202,7 +294,7 @@ angular.module('knt')
 
             {
                 header: 'SIDE_BAR_WIDGET.WORKING_SCHEDULE',
-                tabId : 'teacher_schedule_tab',
+                tabId: 'teacher_schedule_tab',
                 isActive: false,
                 element: [
                     {
@@ -235,7 +327,7 @@ angular.module('knt')
         $scope.tab2Widget = [
             {
                 header: 'SIDE_BAR_WIDGET.TEACHER_DOCS',
-                tabId : 'teacher_docs_tab',
+                tabId: 'teacher_docs_tab',
                 isActive: true,
                 element: [
                     {
@@ -266,7 +358,7 @@ angular.module('knt')
 
             {
                 header: 'SIDE_BAR_WIDGET.STUDENT_DOCS',
-                tabId : 'student_docs_tab',
+                tabId: 'student_docs_tab',
                 isActive: false,
                 element: [
                     {
