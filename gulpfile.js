@@ -23,7 +23,7 @@ var paths = {
     src: 'src',
     iconSource: 'src/icons/*.svg',
     iconDist: 'dist/icons/',
-    imagesSource: 'src/images/*',
+    imagesSource: 'src/images/**',
     imagesDist: 'dist/images/',
     imagesDistClean: 'dist/images/*',
     scriptLibDist: 'dist/js/',
@@ -53,7 +53,8 @@ var lib = [
     'node_modules/angular-translate/dist/angular-translate.js',                 
     //'node_modules/angular-translate/dist/angular-translate.min.js',
     'node_modules/moment/min/moment-with-locales.js',                 
-    //'node_modules/moment/min/moment-with-locales.min.js',
+    //'node_modules/moment/min/moment-with-locales.min.js', 
+
 
 ];
 

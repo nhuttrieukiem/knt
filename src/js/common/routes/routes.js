@@ -9,10 +9,10 @@ angular.module('knt')
 .config(function($routeProvider, $locationProvider) {
    $routeProvider
     .when("/", {
-        templateUrl: 'dist/views/sample/templates/index.html'
+        templateUrl: 'dist/views/sample/templates/index.html',
     })
     .otherwise({
-        templateUrl: 'dist/views/sample/templates/index.html'
+        templateUrl: 'dist/views/sample/templates/index.html',
     });
 
     // use the HTML5 History API

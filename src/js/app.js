@@ -12,6 +12,7 @@ angular.module('k-ui.sample', []);
 var knt = angular.module('knt', [
     'pascalprecht.translate',
     'ngRoute',
-    'k-ui.common'
+    'k-ui.common',
+    'k-ui.sample'
 ]);
 

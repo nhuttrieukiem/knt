@@ -30,7 +30,8 @@ angular.module('knt')
           STUDENT_DOCS: "Student documents",
           DOCS: "Documents",
           YOUTH_GROUP: "Youth group information",
-          EXAM_RESULT: "Exam result"
+          EXAM_RESULT: "Exam result",
+          VIDEO: "Video"
       },
 
       SEARCH: "Search"
@@ -50,12 +51,13 @@ angular.module('knt')
           NEWS: "Tin tức - sự kiện",
           WORKING_SCHEDULE: "Lịch công tác",
           STUDENT_SCHEDULE: "Thời khóa biểu",
-          SCHOOL_NEWS: "Tin tức nhà trường",
+          SCHOOL_NEWS: "Thông Báo",
           TEACHER_DOCS: "Thông tin giáo viên",
           STUDENT_DOCS: "Thông tin học sinh",
           DOCS: "Tài liệu",
           YOUTH_GROUP: "Thông tin đoàn thanh niên",
-          EXAM_RESULT: "Kết quả thi"
+          EXAM_RESULT: "Kết quả thi",
+          VIDEO: "Video"
       },
 
       SEARCH: "Tìm kiếm"

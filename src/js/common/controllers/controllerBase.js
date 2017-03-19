@@ -84,21 +84,28 @@ angular.module('knt')
         $scope.newsWidget = {
             header: $translate.instant('SIDE_BAR_WIDGET.NEWS'),
             rawHeader: "SIDE_BAR_WIDGET.NEWS",
-            header_icon: "icon-keyboard_arrow_right",
+            header_icon: "icon-star",
             is_active: true,
         };
 
         $scope.docsWidget = {
             header: $translate.instant('SIDE_BAR_WIDGET.DOCS'),
             rawHeader: "SIDE_BAR_WIDGET.DOCS",
-            header_icon: "icon-keyboard_arrow_right",
+            header_icon: "icon-collections_bookmark",
             is_active: true,
         };
 
         $scope.schoolNewsWidget = {
             header: $translate.instant('SIDE_BAR_WIDGET.SCHOOL_NEWS'),
             rawHeader: "SIDE_BAR_WIDGET.SCHOOL_NEWS",
-            header_icon: "icon-keyboard_arrow_right",
+            header_icon: "icon-description",
+            is_active: true,
+        };
+
+        $scope.videoWidget = {
+            header: $translate.instant('SIDE_BAR_WIDGET.VIDEO'),
+            rawHeader: "SIDE_BAR_WIDGET.VIDEO",
+            header_icon: "icon-featured_video",
             is_active: true,
         };
 
