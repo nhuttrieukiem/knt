@@ -12,6 +12,6 @@ angular.module('knt')
 
 .constant('CONSTANTS', {
     IMAGE: {
-        AVATAR_DEFAULT: 'dist/images/user_default.png'
+        AVATAR_DEFAULT: 'ui/images/user_default.png'
     }
 })

@@ -14,7 +14,7 @@ angular.module('knt')
             scope: {
                 slideItems: "=",
             },
-            templateUrl: "dist/views/common/templates/partials/k-slideshow.html",
+            templateUrl: "ui/views/common/templates/partials/k-slideshow.html",
 
             link: function (scope, link, attrs) {
                 /**

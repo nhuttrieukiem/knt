@@ -19,23 +19,23 @@ var gulp = require('gulp'),
 
 // define paths
 var paths = {
-    dist: 'dist/*',
+    ui: 'ui/*',
     src: 'src',
     iconSource: 'src/icons/*.svg',
-    iconDist: 'dist/icons/',
+    iconDist: 'ui/icons/',
     imagesSource: 'src/images/**',
-    imagesDist: 'dist/images/',
-    imagesDistClean: 'dist/images/*',
-    scriptLibDist: 'dist/js/',
+    imagesDist: 'ui/images/',
+    imagesDistClean: 'ui/images/*',
+    scriptLibDist: 'ui/js/',
     templateSource: 'src/js/*/templates/**/*',
-    templateDist: 'dist/views/',
+    templateDist: 'ui/views/',
     scriptCommon: 'src/js/common/*/*js',
     scriptApp: 'src/js/app.js',
     scriptPages: ['src/js/sample/*js'],
     fontSource: 'src/fonts/*/*',
-    fontDist: 'dist/fonts/',
+    fontDist: 'ui/fonts/',
     styleSource: 'src/style/',
-    styleDist: 'dist/css/'
+    styleDist: 'ui/css/'
 };
 
 // library paths
@@ -88,22 +88,22 @@ gulp.task('image-compress', function () {
         .pipe(gulp.dest(paths.imagesDist));
 });
 
-// clean all content dist folder
+// clean all content ui folder
 gulp.task('clean', function () {
-    return del(paths.dist);
+    return del(paths.ui);
 });
 
-// clean all content of dist/images
+// clean all content of ui/images
 gulp.task('clean-images', function () {
     return del(paths.imagesDist + "*");
 });
 
-// clean all content of dist/icons
+// clean all content of ui/icons
 gulp.task('clean-icons', function () {
     return del(paths.iconDist + "*");
 });
 
-// clean all content of dist/js
+// clean all content of ui/js
 gulp.task('clean-js', function () {
     return del(paths.scriptLibDist + "*");
 });
@@ -121,22 +121,22 @@ gulp.task('clean-fonts', function () {
 
 // clean js common
 gulp.task('clean-js-common', function () {
-    return del('dist/js/k-ui-common.js');
+    return del('ui/js/k-ui-common.js');
 });
 
 // clean js k-ui
 gulp.task('clean-js-kui', function () {
-    return del('dist/js/k-ui.js');
+    return del('ui/js/k-ui.js');
 });
 
 // clean js pages
 gulp.task('clean-js-pages', function () {
-    return del('dist/js/k-ui-pages.js');
+    return del('ui/js/k-ui-pages.js');
 });
 
 // clean master page
 gulp.task('clean-master-page', function () {
-    return del('dist/index.html');
+    return del('ui/index.html');
 });
 
 // watch 
@@ -242,7 +242,7 @@ gulp.task('build-js-lib', function () {
         gulp.src(lib)
     )
         .pipe(concat('k-ui-lib.js'))
-        .pipe(gulp.dest('dist/js/'));
+        .pipe(gulp.dest('ui/js/'));
 });
 
 // Build k-ui js
@@ -251,7 +251,7 @@ gulp.task('build-js-kui', function () {
         gulp.src(kui)
     )
         .pipe(concat('k-ui.js'))
-        .pipe(gulp.dest('dist/js/'));
+        .pipe(gulp.dest('ui/js/'));
 });
 
 // Build k-ui js
@@ -260,7 +260,7 @@ gulp.task('build-js-common', function () {
         gulp.src(kui_common)
     )
         .pipe(concat('k-ui-common.js'))
-        .pipe(gulp.dest('dist/js/'));
+        .pipe(gulp.dest('ui/js/'));
 });
 
 // Build js pages
@@ -269,7 +269,7 @@ gulp.task('build-js-pages', function () {
         gulp.src(paths.scriptPages)
     )
         .pipe(concat('k-ui-pages.js'))
-        .pipe(gulp.dest('dist/js/'));
+        .pipe(gulp.dest('ui/js/'));
 });
 
 
@@ -306,7 +306,7 @@ gulp.task('copy-views', function () {
 });
 
 gulp.task('start-server', function (cb) {
-    exec('http-server dist/', function (err, stdout, stderr) {
+    exec('http-server ui/', function (err, stdout, stderr) {
         console.log(stdout);
         console.log(stderr);
         cb(err);

@@ -14,7 +14,7 @@ angular.module('knt')
             scope: {
                 navList: '=',
             },
-            templateUrl: "dist/views/common/templates/partials/k-navbar.html",
+            templateUrl: "ui/views/common/templates/partials/k-navbar.html",
 
             link: function (scope, link, attrs) {
                 /**

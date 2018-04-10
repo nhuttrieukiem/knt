@@ -25,7 +25,7 @@ npm install -g http-server
 npm install
 ```
 
-3. When packages is installed successfully, run gulp to build the dist folder
+3. When packages is installed successfully, run gulp to build the ui folder
 
 ```
 gulp
