@@ -17,7 +17,7 @@ Clone or download this source code to your local machine.
 ```
 npm install -g gulp 
 
-npm install -g http-server
+npm install -g express
 ```
 2. After that, we have to install all required packages
 
@@ -37,7 +37,7 @@ gulp
 npm start
 ```
 
-Now your server is running at port 1812, to try it, access http://localhost:1812
+Now your server is running at port 1810, to try it, access http://localhost:1810
 
 I am completing the documents after, please wait :-)
 
